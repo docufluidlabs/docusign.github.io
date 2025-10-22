@@ -1,19 +1,21 @@
-# Smartsheet Integration with DocuSign
+# Smartsheet Integration with Docusign
 
 ## How to Install and Configure
 
-Installing Smartsheet App to DocuSign Maestro.  
-`For more detailed instructions, please follow the` [DocuSign guide](https://support.docusign.com/s/document-item?language=en_US&bundleId=ous1698169987748&topicId=ctg1698170340729.html&_LANG=enus)
+Installing Smartsheet App to Docusign Maestro.  
+`For more detailed instructions, please follow the` [Docusign guide](https://support.Docusign.com/s/document-item?language=en_US&bundleId=ous1698169987748&topicId=ctg1698170340729.html&_LANG=enus)
 
 ---
 
-**Step 1.** Go to [DocuSign App Center](https://apps-d.docusign.com/app-center/extensionapps)  
+**Step 1.** Go to [Docusign App Center](https://apps-d.Docusign.com/app-center/extensionapps)  
 
-**Step 2.** Make sure you have **Admin rights** to install the Smartsheet app from the DocuSign App Center.  
-<img src="https://github.com/user-attachments/assets/07d93633-80c5-461b-9485-b3850a571a26" alt="image" width="80%"/>
+**Step 2.** Make sure you have **Admin rights** to install the Smartsheet app from the Docusign App Center.  
+<img width="1159" height="791" alt="image" src="https://github.com/user-attachments/assets/e23d9128-c90d-41ca-9f50-d9a8b58a2d47" />
+
 
 **Step 3.** Find the app and click on **“Install App”**, then click **“Continue”**.  
-<img src="https://github.com/user-attachments/assets/f2991532-a896-4427-b107-c4155919708e" alt="image" width="70%"/>
+<img width="1085" height="210" alt="image" src="https://github.com/user-attachments/assets/4361db41-3c5a-40e7-a6ea-cf51284892e1" />
+
 
 **Step 4.** Once the app is installed, you’ll be prompted to connect the app to your Smartsheet workspace. Select **Private** or **Shared** connection type, as well as the name of the connection.  
 <img src="https://github.com/user-attachments/assets/0bfa7bd2-af51-45ad-b6d1-0d841a8ac259" alt="image" width="60%"/>  
@@ -24,7 +26,7 @@ Installing Smartsheet App to DocuSign Maestro.
 
 <img src="https://github.com/user-attachments/assets/a87e6e38-fc21-40be-a9d5-5ec6d3d56cc0" alt="image" width="60%"/>
 
-If connected successfully, you can go to [DocuSign App Manager](https://apps-d.docusign.com/app-center/manage) and manage your app if needed. To manage connections or uninstall the app, press the three dots next to the app name.  
+If connected successfully, you can go to [Docusign App Manager](https://apps-d.Docusign.com/app-center/manage) and manage your app if needed. To manage connections or uninstall the app, press the three dots next to the app name.  
 
 <img src="https://github.com/user-attachments/assets/f03d64c9-e074-44e1-900a-2e911cc74ec4" alt="image" width="80%"/>
 
@@ -36,7 +38,7 @@ The Smartsheet extension makes it easy to **send, track, and attach signed docum
 
 Start by creating a workflow and selecting a Smartsheet action to connect your account and manage eSignatures directly from Smartsheet.
 
-You can start by creating a new workflow by following [this DocuSign link](https://apps-d.docusign.com/send/workflows) or navigating to **Agreements → Maestro Workflows → Create Workflow**.
+You can start by creating a new workflow by following [this Docusign link](https://apps-d.Docusign.com/send/workflows) or navigating to **Agreements → Maestro Workflows → Create Workflow**.
 
 <img src="https://github.com/user-attachments/assets/0e858612-cb74-43b4-9d57-b295fac91b51" alt="image" width="85%"/>
 
@@ -93,7 +95,7 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 > Example: If updating a contract status - use **Update**. If adding a new row with a given value - use **Create**.  
 
 4. Select the fields you want to write to (these are Smartsheet **columns**).  
-5. Map DocuSign fields to Smartsheet fields.  
+5. Map Docusign fields to Smartsheet fields.  
    <img src="https://github.com/user-attachments/assets/b22e0b45-8579-4d19-b0bd-cfbe715fdd6b" alt="image" width="75%"/>  
    <img src="https://github.com/user-attachments/assets/0c3927ff-5862-49ed-a588-ddda2e565dcc" alt="image" width="40%"/>
 
@@ -124,13 +126,13 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 
 ## How to Reconnect the App
 
-You will be required to reconnect Smartsheet to DocuSign Maestro if there have been updates made to the structure of the sheets you use (new columns added, or current column type/names changed).
+You will be required to reconnect Smartsheet to Docusign Maestro if there have been updates made to the structure of the sheets you use (new columns added, or current column type/names changed).
 
 **Steps:**
-1. Log in to your **DocuSign account** with administrator credentials.  
+1. Log in to your **Docusign account** with administrator credentials.  
 2. In a new browser tab, go to the appropriate environment:  
-   - [Production](https://apps.docusign.com/app-center)  
-   - [Demo](https://apps-d.docusign.com/app-center)  
+   - [Production](https://apps.Docusign.com/app-center)  
+   - [Demo](https://apps-d.Docusign.com/app-center)  
 3. Select the **Smartsheet icon** and click **Manage Connections**. You will see a screen that allows you to "**Reconnect**". 
 
 <img src="https://github.com/user-attachments/assets/85aff387-6104-4dc8-8432-e67e40c904ea" alt="image" width="80%"/>
@@ -146,4 +148,4 @@ You will be required to reconnect Smartsheet to DocuSign Maestro if there have b
 > In v1.0, include the **Primary column value** as the file name. This ensures it maps correctly.  
 
 **How does the app know which row data to use?**  
-> Add a dedicated trigger/status column (e.g. “Next for DocuSign”). Have the app **Read** that row. Then in the next workflow step, use **Writeback** to change it to “In progress” to prevent duplicates.  
+> Add a dedicated trigger/status column (e.g. “Next for Docusign”). Have the app **Read** that row. Then in the next workflow step, use **Writeback** to change it to “In progress” to prevent duplicates.  
