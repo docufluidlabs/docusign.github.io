@@ -11,8 +11,8 @@ This is the documentation for the Procore integration with Docusign.
 **Step 1.** Go to [Docusign App Center](https://apps-d.docusign.com/app-center/extensionapps)
 
 **Step 2.** Make sure you have Admin rights to install the Procore app from the Docusign App Center.
+<img width="2560" height="1204" alt="image" src="https://github.com/user-attachments/assets/77249799-c3e9-41bf-a15f-3fc231221ef1" />
 
-<img width="1920" height="887" alt="image" src="https://github.com/user-attachments/assets/61d198a6-f87f-4dbc-a1f8-c50370a64785" />
 
 **Step 3.** Find the app and press "Install App", then press "Continue".
 
@@ -26,9 +26,11 @@ This is the documentation for the Procore integration with Docusign.
 
 **Step 6.** Select Procore company, project, then click "Continue to Docusign".
 
-<img width="1920" height="886" alt="image" src="https://github.com/user-attachments/assets/e3086ad5-3c37-4652-afca-23eec5af5fc5" />
+<img width="2560" height="1157" alt="image" src="https://github.com/user-attachments/assets/a1444aaf-2399-4d98-9b8f-650bf12ea5b3" />
 
-<img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/6c04f3f4-7a92-48ff-9249-e0d8b97490cc" />
+
+<img width="2560" height="1158" alt="image" src="https://github.com/user-attachments/assets/d6c5db82-41e8-45df-b207-5a07fa613f5e" />
+
 
 
 If connected successfully, you can go to [Docusign App Center Manage](https://apps-d.docusign.com/app-center/manage). To manage connections or uninstall the app, please press the three dots next to the app name.
