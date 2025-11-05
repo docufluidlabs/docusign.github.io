@@ -12,10 +12,8 @@ Installing Smartsheet App to Docusign Maestro.
 **Step 2.** Make sure you have **Admin rights** to install the Smartsheet app from the Docusign App Center.  
 <img width="1159" height="791" alt="image" src="https://github.com/user-attachments/assets/e23d9128-c90d-41ca-9f50-d9a8b58a2d47" />
 
-
 **Step 3.** Find the app and click on **“Install App”**, then click **“Continue”**.  
 <img width="1085" height="210" alt="image" src="https://github.com/user-attachments/assets/4361db41-3c5a-40e7-a6ea-cf51284892e1" />
-
 
 **Step 4.** Once the app is installed, you’ll be prompted to connect the app to your Smartsheet workspace. Select **Private** or **Shared** connection type, as well as the name of the connection.  
 <img src="https://github.com/user-attachments/assets/0bfa7bd2-af51-45ad-b6d1-0d841a8ac259" alt="image" width="60%"/>  
@@ -71,6 +69,7 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 
 - Select your Smartsheet fields that you would like to use in this workflow. You will later be able to map these field to other steps.  
 <img src="https://github.com/user-attachments/assets/fc02cc05-4460-4660-80fb-42ab4b722556" alt="image" width="50%"/>  
+
 <img src="https://github.com/user-attachments/assets/35f8a707-dd37-4068-9b73-f15d550061d0" alt="image" width="85%"/>
 
 - **Important:** In order to let the app know which row to pull the data from, you need to be able to **identify** it. If this is the first data inflow in your workflow, we would suggest creating a column in Smartsheet which would hold the identification value, such as "Use this row" or "Not Started". As a following step you will be able to update that cell using a Writeback function to change it's value to "Started" or "In progress" to make sure it's not used by future instances of the workflow. In the following steps, now that the app knows which row to use, you can use one of the unique values to map back to this row.
@@ -109,21 +108,36 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 ## Configuring `File Write` to Smartsheet
 
 > [!IMPORTANT]
-> If you see “No files available” when configuring this step, it means previous Maestro steps did not generate any files.
+> If you see "No files available" when configuring this step, it means previous Maestro steps did not generate any files.
 
 ![image](https://github.com/user-attachments/assets/7b80261a-eaee-4f2b-8019-72413a56b440)
 
-1. Select the file you want to write to Smartsheet.  
+**Steps:**
+
+1. **Select the file** you want to attach to Smartsheet.  
    ![file to write](https://github.com/user-attachments/assets/0dba94ab-b4e1-4b43-9027-1127b839f08a)
 
-2. Next select a **workspace and sheet** that holds a row you need to add the file to.
+2. **Select drive** - you can choose anything  
+   **Select folder** select a table that holds a row you need to add the file to  
+
    ![image](https://github.com/user-attachments/assets/b63cdceb-1f17-45ad-a32e-f7db34344ef0)
 
-3. **Important:** When choosing the **name for the file**, use the value stored in the **Primary Column** for that row. This is the method used in the v1.0 of the Smartsheet app to correctly identify the row to add the file to.
+3. **Specify a file name**
 
-![image](https://github.com/user-attachments/assets/b4f19c31-bef8-4e97-9d43-0b44d7e87f27)
+   It is to define the row identifier the file will be attached to
 
+   - Use variable to create a custom file name
+   - Click `Add Variable` to insert data from previous steps returning Record ID. It can be any Read or Create step.
 
+   ![specify-file-name](./images/specify-file-name.png)
+
+**How File Attachment Works:**
+
+The app attempts to attach files in the following order:
+
+1. **Row-level attachment** (preferred): The app extracts the row identifier from the filename (everything before the file extension) and attempts to attach the file directly to that specific row using the Primary Column value.
+
+2. **Sheet-level attachment** (fallback): If the row cannot be found or the row attachment fails, the file is attached at the sheet level instead. You'll receive a message indicating: `"Row {identifier} not found in table '{sheet-name}', file was attached to the table instead"`
 
 ---
 
@@ -132,11 +146,12 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 You will be required to reconnect Smartsheet to Docusign Maestro if there have been updates made to the structure of the sheets you use (new columns added, or current column type/names changed).
 
 **Steps:**
+
 1. Log in to your **Docusign account** with administrator credentials.  
 2. In a new browser tab, go to the appropriate environment:  
    - [Production](https://apps.Docusign.com/app-center)  
    - [Demo](https://apps-d.Docusign.com/app-center)  
-3. Select the **Smartsheet icon** and click **Manage Connections**. You will see a screen that allows you to "**Reconnect**". 
+3. Select the **Smartsheet icon** and click **Manage Connections**. You will see a screen that allows you to "**Reconnect**".
 
 <img src="https://github.com/user-attachments/assets/85aff387-6104-4dc8-8432-e67e40c904ea" alt="image" width="80%"/>
 
