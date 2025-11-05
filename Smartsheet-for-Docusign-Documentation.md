@@ -107,20 +107,20 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 
 ## Configuring `File Write` to Smartsheet
 
-> [!IMPORTANT]
+> **Important:**
 > If you see "No files available" when configuring this step, it means previous Maestro steps did not generate any files.
 
-![image](https://github.com/user-attachments/assets/7b80261a-eaee-4f2b-8019-72413a56b440)
+<img src="https://github.com/user-attachments/assets/7b80261a-eaee-4f2b-8019-72413a56b440" alt="image" width="60%"/>
 
 **Steps:**
 
 1. **Select the file** you want to attach to Smartsheet.  
-   ![file to write](https://github.com/user-attachments/assets/0dba94ab-b4e1-4b43-9027-1127b839f08a)
+   <img src="https://github.com/user-attachments/assets/0dba94ab-b4e1-4b43-9027-1127b839f08a" alt="file to write" width="60%"/>
 
 2. **Select drive** - you can choose anything  
    **Select folder** select a table that holds a row you need to add the file to  
 
-   ![image](https://github.com/user-attachments/assets/b63cdceb-1f17-45ad-a32e-f7db34344ef0)
+   <img src="https://github.com/user-attachments/assets/b63cdceb-1f17-45ad-a32e-f7db34344ef0" alt="image" width="60%"/>
 
 3. **Specify a file name**
 
@@ -129,7 +129,7 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
    - Use variable to create a custom file name
    - Click `Add Variable` to insert data from previous steps returning Record ID. It can be any Read or Create step.
 
-   ![specify-file-name](./images/specify-file-name.png)
+   <img src="./images/specify-file-name.png" alt="specify-file-name" width="60%"/>
 
 **How File Attachment Works:**
 
