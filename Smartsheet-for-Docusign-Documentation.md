@@ -112,7 +112,7 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 
 <img src="https://github.com/user-attachments/assets/7b80261a-eaee-4f2b-8019-72413a56b440" alt="image" width="60%"/>
 
-**Steps:**
+### Steps
 
 1. **Select the file** you want to attach to Smartsheet.  
    <img src="https://github.com/user-attachments/assets/0dba94ab-b4e1-4b43-9027-1127b839f08a" alt="file to write" width="60%"/>
