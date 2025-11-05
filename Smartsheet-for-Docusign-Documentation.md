@@ -106,20 +106,23 @@ Select the **Smartsheet object** (workspace items such as sheets or projects), t
 
 ---
 
-## Configuring “File Write” to Smartsheet
+## Configuring `File Write` to Smartsheet
 
-> ⚠️ If you see “No files available” when configuring this step, it means previous Maestro steps did not generate any files.
+> [!IMPORTANT]
+> If you see “No files available” when configuring this step, it means previous Maestro steps did not generate any files.
 
-<img src="https://github.com/user-attachments/assets/7b80261a-eaee-4f2b-8019-72413a56b440" alt="image" width="40%"/>
+![image](https://github.com/user-attachments/assets/7b80261a-eaee-4f2b-8019-72413a56b440)
 
 1. Select the file you want to write to Smartsheet.  
-   <img src="https://github.com/user-attachments/assets/0dba94ab-b4e1-4b43-9027-1127b839f08a" alt="image" width="45%"/>
+   ![file to write](https://github.com/user-attachments/assets/0dba94ab-b4e1-4b43-9027-1127b839f08a)
 
-2. Next select a **workspace and sheet** that holds a row you need to add the file to. 
-   <img src="https://github.com/user-attachments/assets/b63cdceb-1f17-45ad-a32e-f7db34344ef0" alt="image" width="45%"/>
+2. Next select a **workspace and sheet** that holds a row you need to add the file to.
+   ![image](https://github.com/user-attachments/assets/b63cdceb-1f17-45ad-a32e-f7db34344ef0)
 
-3. **Important:** When choosing the **name for the file**, use the value stored in the **Primary Column** for that row. This is the method used in the v1.0 of the Smartsheet app to correctly identify the row to add the file to.  
-   <img src="https://github.com/user-attachments/assets/b4f19c31-bef8-4e97-9d43-0b44d7e87f27" alt="image" width="45%"/>
+3. **Important:** When choosing the **name for the file**, use the value stored in the **Primary Column** for that row. This is the method used in the v1.0 of the Smartsheet app to correctly identify the row to add the file to.
+
+![image](https://github.com/user-attachments/assets/b4f19c31-bef8-4e97-9d43-0b44d7e87f27)
+
 
 
 ---
