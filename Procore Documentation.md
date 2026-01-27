@@ -98,6 +98,29 @@ In the workflow, when adding a new step, you'll see three Procore options:
 
 - After pressing Apply, the "Read" step is successfully added to your workflow. You can now use the retrieved Procore data in the following steps.
 
+### ℹ️ Configuring "File Output" to Procore
+
+The File Output step allows you to upload signed documents directly to Procore and attach them to specific objects like Prime Contracts.
+
+- Select "File Output" from the workflow step options.
+
+- Select your Procore connection.
+
+- Choose the target object type (e.g., "Prime Contracts") as the destination drive.
+
+- Configure the file path to include the **Project ID** and **Object ID** using workflow variables:
+  - The path format should be: `{{projectId}}/{{objectId}}/filename.pdf`
+  - **projectId** - The Procore project ID where the file will be uploaded
+  - **objectId** - The ID of the object (e.g., Prime Contract ID) to attach the file to
+
+- The file will be:
+  1. Uploaded to the Documents folder at: `Documents/{objectType}/{objectId}/`
+  2. Automatically attached to the specified object (e.g., Prime Contract)
+
+**Example:** For a Prime Contract with ID `90529` in project `302381`, the signed document will be stored in `Documents/primeContracts/90529/` and linked to Prime Contract #90529.
+
+**Note:** You can use values from a previous "Read from Procore" step to dynamically populate the projectId and objectId in the file path.
+
 ### Supported Field Types
 
 You can use the following Procore field types in Maestro workflows:
