@@ -121,6 +121,50 @@ The File Output step allows you to upload signed documents directly to Procore a
 
 **Note:** You can use values from a previous "Read from Procore" step to dynamically populate the projectId and objectId in the file path.
 
+### ℹ️ Using Project ID in Workflow Steps
+
+By default, all Procore API calls use the project selected during the initial connection setup. However, you can override this by specifying a `project_id` field in your workflow steps, allowing a single workflow to work with multiple Procore projects.
+
+#### How It Works
+
+- **Default Behavior**: If `project_id` is not specified, the connection's default project is used (set during OAuth setup)
+- **Override Behavior**: Include `project_id` in your Read or Writeback step to use a different project
+
+#### Using project_id in Read Steps
+
+When configuring a "Read from Procore" step, you can add `project_id` as a filter condition:
+
+1. Add a filter condition with field `project_id`
+2. Set the operator to `EQUALS`
+3. Provide the project ID value (can be a literal or from a previous workflow step)
+
+The `project_id` will be used for API routing but will **not** be included in the actual search comparison. This means you can combine it with other filters:
+
+```text
+project_id EQUALS 12345 AND status EQUALS "approved"
+```
+
+In this example, the API call targets project 12345, and only records with status "approved" are returned.
+
+#### Using project_id in Writeback Steps
+
+When configuring a "Writeback to Procore" step (Create or Update), you can include `project_id` as a field:
+
+1. Add `project_id` to your field mappings
+2. Map it to a value (literal or from a previous step like trigger inputs)
+
+**Note**: For most object types (Prime Contracts, Project Users, Project Vendors), `project_id` is used only for API routing and is not sent in the request body. For Change Order Packages, `project_id` is included in both the URL and request body as required by the Procore API.
+
+#### Example: Multi-Project Workflow
+
+A workflow triggered from Procore can pass the project context through trigger inputs:
+
+1. **Trigger**: Workflow receives `project.id` from Procore trigger inputs
+2. **Read Step**: Use `project_id` filter with value from `{{trigger.project.id}}`
+3. **Writeback Step**: Include `project_id` field mapped to `{{trigger.project.id}}`
+
+This allows the same workflow to operate on different projects based on where it was triggered.
+
 ### Supported Field Types
 
 You can use the following Procore field types in Maestro workflows:
